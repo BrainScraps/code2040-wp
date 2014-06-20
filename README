@@ -1,0 +1,26 @@
+To use the cap scripts, you will first need to:
+
+git clone --recursive git://github.com/andreascreten/wp-cli.git ~/git/wp-cli
+cd ~/git/wp-cli
+sudo utils/build-dev
+
+
+Note: This script is kind of ghetto, and needs to be refactored/rewritten.
+
+=== HOW TO USE ===
+
+TO DEPLOY CODE TO STAGING:
+cap staging deploy
+
+TO PUSH LOCAL DATABASE TO STAGING:
+cap local db:down && cap staging db:push
+
+TO PUSH LOCAL FILES TO STAGING:
+cap staging files:push
+
+TO PULL STAGING DATABASE TO LOCAL:
+cap staging db:pull
+
+TO PULL STAGING FILES TO LOCAL:
+cap staging files:pull
+
